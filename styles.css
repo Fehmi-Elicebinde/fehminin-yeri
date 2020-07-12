@@ -1,1 +1,25 @@
 
+body {
+	background-color: rgba(100, 100, 0);	
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+form {
+	font-size: 1.4em; 
+}
+
+button, input {
+	font-size: 1.2em; 
+}
+
+
+#fname {
+	max-width: 200;
+}
