@@ -5,32 +5,28 @@
 	<meta content="utf-8" http-equiv="encoding">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
-	<h2>Fehmi Dayı Hoşgeldiniz Diyor Size hA!</h2>
-	<form>
-		<label for="email">Enter your email:</label>
-		<input type="email" id="email" name="email">
-	</form>
+<body>	
 	
 	<form>
 		<fieldset>
-			<legend>Güney Diline Katkı:</legend>
+			<legend style="color:white; font-size:20">Güney Diline Katkı:</legend>
 			<label for="fname">Kelime:</label><br>
-			<input type="text" id="fname" name="fname" value="Nevzat"><br>
+			<input type="text" id="fname" name="fname" value="Çoşka" size="100"><br>
 			<label for="lname">Anlamı:</label><br>
-			<input type="text" id="lname" name="lname" value="Kulaklı Elicebindelere verilen genel ad"><br><br>
-			<button type="button" onclick="yaz()">"evet ekleyebiliriz"</button>
+			<input type="text" id="lname" name="lname" value="Hafif kızma yollu söylenen söz" size="100">
+			<br><br>
+			<button type="button" onclick="yaz()">Ekle Gitsin</button>
 		</fieldset>
 	</form>
 	
 	<ul id="sözlük"> </ul>
-	
-	<img src="./feho.jpg">
-  
+	  
   </body>
   
   <script type=text/javascript>
 	function yaz() {
+			console.log("tamam");
+
 		const liste = document.getElementById("sözlük");
 		liste.innerHTML = "<li>" + fname.value + ": " + lname.value + "</li>" + liste.innerHTML;
 	}
