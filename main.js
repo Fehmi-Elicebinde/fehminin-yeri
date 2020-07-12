@@ -1,5 +1,6 @@
 let sozluk;
 let ref;
+
 function setup() {
 	// Retrieve and show the sozluk onload
 	sozluk = JSON.parse(localStorage.getItem("sozluk") || "{}");
@@ -19,35 +20,47 @@ function setup() {
 	firebase.initializeApp(firebaseConfig);
 	const db = firebase.database();
 	ref = db.ref("entries");
+	ref.on("value", gotData, gotError);
 }
 
 function update() {
 	console.log("updating..")
-	// Get the unordered list element 
-	const liste = document.getElementById("sözlük");
-	// Update the innerHTML by what user typed
-	liste.innerHTML = "<li>" + fname.value + ": " + lname.value + "</li>" + liste.innerHTML;
-	// Save the word: meaning pair to the object and save to local storage 
-	sozluk[fname.value] = lname.value;
-	localStorage.setItem("sozluk", JSON.stringify(sozluk));
 	
+	// Get the unordered list element 
+	// const liste = document.getElementById("sözlük");
+	
+	// Update the innerHTML by what user typed
+	//liste.innerHTML = "<li>" + fname.value + ": " + lname.value + "</li>" + liste.innerHTML;
+	
+	// Save the data to database
 	ref.push({
-		"word":fname.value,
-		"meaning":lname.value
+		"word": unescape(encodeURIComponent(fname.value)),
+		"meaning": unescape(encodeURIComponent(lname.value))
 	});
-
-	// Refresh the view of sozluk
-	//showSozluk();
+	showSozluk();
 }
 
+function gotData(data) {
+	console.log("veri geldi!")
+	sozluk = data.val();
+	showSozluk();
+}
+
+function gotError(err) {
+	console.log("ERROR oh boy:", err);
+	console.log("hata geldi!")
+}
+	
 function showSozluk() {
-	console.log("showing 1 time only?..")
+	// console.log("showing 1 time only?..")
+	
 	// Select the unordered list and fill its HTML by sozluk's elements
 	const liste = document.getElementById("sözlük");
+	liste.innerHTML = "";
+	
 	for (const [key, value] of Object.entries(sozluk)) {
-		liste.innerHTML = "<li>" + key + ": " + value + "</li>" + liste.innerHTML;
+		const word = decodeURIComponent(escape(value.word));
+		const meaning = decodeURIComponent(escape(value.meaning));
+		liste.innerHTML = "<li>" + word + ": " + meaning + "</li>" + liste.innerHTML;
 	}
 }
-
-// sıfırlamak
-// localStorage.setItem("sozluk", JSON.stringify({}));
