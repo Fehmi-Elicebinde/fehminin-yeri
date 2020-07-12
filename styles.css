@@ -1,6 +1,5 @@
-
 body {
-	background-color: lightgreen;	
+	background-color: rgba(120, 177, 150);	
 }
 
 .center {
@@ -10,6 +9,14 @@ body {
   width: 50%;
 }
 
+legend {
+	font-size:20;
+	color:darkblue;
+}
+
+label {
+	color: rgb(255, 255, 222);
+}
 
 form {
 	font-size: 1.4em; 

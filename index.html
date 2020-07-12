@@ -4,31 +4,29 @@
 	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 	<meta content="utf-8" http-equiv="encoding">
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src="p5.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
 </head>
 <body>	
 	
 	<form>
 		<fieldset>
-			<legend style="color:white; font-size:20">Güney Diline Katkı:</legend>
-			<label for="fname">Kelime:</label><br>
-			<input type="text" id="fname" name="fname" value="Çoşka" size="100"><br>
-			<label for="lname">Anlamı:</label><br>
-			<input type="text" id="lname" name="lname" value="Hafif kızma yollu söylenen söz" size="100">
+			<legend>Güney Diline Katkı:</legend>
+			<label for="fname">Kelime:</label>
+			<br>
+			<input type="text" id="fname" name="fname" size="100">
 			<br><br>
-			<button type="button" onclick="yaz()">Ekle Gitsin</button>
+			<label for="lname">Anlamı:</label><br>
+			<input type="text" id="lname" name="lname" size="100">
+			<br><br>
+			<button type="button" onclick="update()">Ekle</button>
 		</fieldset>
 	</form>
 	
 	<ul id="sözlük"> </ul>
-	  
+	
+	<!-- <img src="./ss.jpg" class="center" width="600" height="336"> -->
+  
   </body>
   
-  <script type=text/javascript>
-	function yaz() {
-			console.log("tamam");
-
-		const liste = document.getElementById("sözlük");
-		liste.innerHTML = "<li>" + fname.value + ": " + lname.value + "</li>" + liste.innerHTML;
-	}
-  </script>
 </html>
