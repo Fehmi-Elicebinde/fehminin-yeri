@@ -1,7 +1,7 @@
 let sozluk;
 function setup() {
 	// Retrieve and show the sozluk onload
-	sozluk = JSON.parse(localStorage.getItem("sozluk") || {});
+	sozluk = JSON.parse(localStorage.getItem("sozluk") || "{}");
 	showSozluk();
 }
 
