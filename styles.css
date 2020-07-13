@@ -77,25 +77,25 @@ body {
 }
 
 /* unvisited link */
-#sozluk_link:link {
+a:link {
   color: darkgreen;
   text-decoration: none;
 }
 
 /* visited link */
-#sozluk_link:visited {
+a:visited {
   color: darkgreen;
   text-decoration: none;
 }
 
 /* mouse over link */
-#sozluk_link:hover {
+a:hover {
   color: darkgreen;
   text-decoration: none;
 }
 
 /* selected link */
-#sozluk_link:active {
+a:active {
   color: darkgreen;
   text-decoration: none;
 }
