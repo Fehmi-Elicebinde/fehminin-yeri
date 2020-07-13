@@ -1,13 +1,3 @@
-/* * { */
-	
-	/* margin: 5px;	 */
-
-/* } */
-
-/* body { */
-	/* background-color: rgba(120, 177, 150);	 */
-/* } */
-
 /* .center { */
   /* display: block; */
   /* margin-left: auto; */
@@ -15,39 +5,45 @@
   /* width: 50%; */
 /* } */
 
-/* h1 { */
-	/* color: darkblue; */
-/* } */
+h1 {
+	color:#008B8B;
+	margin: 0;
+	font-size: 50px;
+	font-family: "Allerta Stencil";
+}
 
-/* legend { */
-	/* font-size:20; */
-	/* color:darkblue; */
-/* } */
+legend {
+	font-size:20;
+	color:darkblue;
+}
 
-/* label { */
-	/* color: rgb(255, 255, 222); */
-/* } */
+label {
+	color: #008B8B;
+}
 
-/* form { */
-	/* font-size: 1.4em;  */
-/* } */
+form {
+	font-size: 1.4em; 
+}
 
-/* button, input { */
-	/* font-size: 1.2em;  */
-/* } */
+button, input {
+	font-size: 1.2em; 
+}
 
-/* ul { */
-	/* font-size: 1.3em; */
-	/* color: lavender; */
-/* } */
+ul {
+	font-size: 1.8em;
+	color: darkblue;
+	font-family: Atma;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
 
-/* #fname { */
-	/* max-width: 200; */
-/* } */
+
+/* from styles.css */
 
 * {
 	box-sizing: border-box;
-	/* zoom: 98%; */
+	zoom: 98%;
 }
 
 .row::after {
@@ -56,11 +52,76 @@
 	display: table;
 }
 
-
 [class*="col-"] {
 	float: left;
 	padding: 15px;
 }
+
+body {
+	background-color: rgba(120, 177, 150);
+	font-family: "Spectral";
+	background-image: url("../images/sozluk_bg.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#fname, #lname {
+	width: 100%;
+}
+
+/* .header { */
+	/* background-color: rgba(63, 106, 120, 0.8);	 */
+	/* color: #ffffff; */
+	/* padding: 4px; */
+	/* font-family: "Optima"; */
+/* } */
+
+/* .menu ul { */
+	/* list-style-type: none; */
+	/* margin: 0; */
+	/* padding: 0; */
+/* } */
+
+/* .menu li { */
+	/* padding: 28px; */
+	/* margin-bottom: 7px; */
+	/* background-color: #33b5e5; */
+	/* color: darkgreen; */
+	/* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+	/* font-weight: bold; */
+	/* font-size: 44px; */
+	/* font-family: Courier, sans-serif; */
+/* } */
+
+/* .menu li:hover { */
+	/* background-color: #0099cc; */
+	/* cursor: pointer; */
+/* } */
+
+/* /* unvisited link */ */
+/* #sozluk_link:link { */
+  /* color: darkgreen; */
+  /* text-decoration: none; */
+/* } */
+
+/* /* visited link */ */
+/* #sozluk_link:visited { */
+  /* color: darkgreen; */
+  /* text-decoration: none; */
+/* } */
+
+/* /* mouse over link */ */
+/* #sozluk_link:hover { */
+  /* color: darkgreen; */
+  /* text-decoration: none; */
+/* } */
+
+/* /* selected link */ */
+/* #sozluk_link:active { */
+  /* color: darkgreen; */
+  /* text-decoration: none; */
+/* } */
 
 /* For mobile phones: */
 [class*="col-"] {
@@ -82,7 +143,6 @@
 	.col-s-11 {width: 91.66%;}
 	.col-s-12 {width: 100%;}
 }
-
 @media only screen and (min-width: 768px) {
 	/* For desktop: */
 	.col-1 {width: 8.33%;}
@@ -97,4 +157,4 @@
 	.col-10 {width: 83.33%;}
 	.col-11 {width: 91.66%;}
 	.col-12 {width: 100%;}
-}
+}	
