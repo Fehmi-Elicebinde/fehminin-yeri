@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<link rel="stylesheet" type="text/css" href="sozluk_styles.css">
+		<script type="text/javascript" src="../libraries/p5.min.js"></script>
+		<script src="../libraries/fb_app.js"></script>
+		<script src="../libraries/fb_auth.js"></script>
+		<script src="../libraries/fb_database.js"></script>
+		<script type="text/javascript" src="sozluk.js"></script>
+	</head>
+	
+	<body>	
+
+		<div class="row">
+			<!-- <div class="col-2 col-s-3"> -->
+				<form class="col-3 col-s-3">
+					<fieldset>
+						<legend>Güney Diline Katkı:</legend>
+						<label for="fname">Kelime:</label>
+						<br>
+						<input type="text" id="fname" name="fname" size="100">
+						<br><br>
+						<label for="lname">Anlamı:</label><br>
+						<input type="text" id="lname" name="lname" size="100">
+						<br><br>
+						<button type="button" onclick="update()">Ekle</button>
+					</fieldset>
+				</form>
+			<!-- </div> -->
+			
+			<!-- <div class="col-1 col-s-12"> -->
+				<br>
+				<h1 class="col-9 col-s-12"> Sözlük </h1>
+				<ul  class="col-9 col-s-12"id="sözlük"> </ul>
+			<!-- </div> -->
+		</div>
+	</body>
+  
+</html>

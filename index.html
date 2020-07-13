@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-	<meta content="utf-8" http-equiv="encoding">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<script type="text/javascript" src="p5.min.js"></script>
-	<script src="fb_app.js"></script>
-	<script src="fb_auth.js"></script>
-	<script src="fb_database.js"></script>
-	<script type="text/javascript" src="main.js"></script>
-</head>
-<body>	
-	
-	<form>
-		<fieldset>
-			<legend>Güney Diline Katkı:</legend>
-			<label for="fname">Kelime:</label>
-			<br>
-			<input type="text" id="fname" name="fname" size="100">
-			<br><br>
-			<label for="lname">Anlamı:</label><br>
-			<input type="text" id="lname" name="lname" size="100">
-			<br><br>
-			<button type="button" onclick="update()">Ekle</button>
-		</fieldset>
-	</form>
-	<br>
-	<h1> Sözlük </h1>
-	<ul id="sözlük"> </ul>
-	
-	<!-- <img src="./ss.jpg" class="center" width="600" height="336"> -->
-  
-  </body>
-  
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Peralta" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
+		<script type="text/javascript" src="libraries/p5.min.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<h1 id="baslik">Güney Köyü</h1>
+		</div>
+
+		<div class="row">
+			<div class="col-3 col-s-3 menu">
+				<ul>
+					<li><a id="sozluk_link" href="sozluk">Sözlük</a></li>
+					<br><br>
+					<li>Hakkında</li>
+					<br><br>
+					<li>Konum</li>
+				</ul>
+		  </div>
+
+		  <div class="col-9 col-s-9">
+			<h1 id = "on_baslik"><em>Ön Söz</em></h1>
+			<p id="on_soz">
+				Merhaba Yolcu!
+				<br><br>
+				Bu sitenin asli amacı Güney köyünde konuşulan dili yaşatmak.
+			</p>
+		  </div>
+		</div>
+	</body>
 </html>
